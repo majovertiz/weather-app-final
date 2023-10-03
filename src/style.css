@@ -1,1 +1,31 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+h1 {
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+}
+.main-app-container {
+  max-width: 600px;
+  margin: 30px auto;
+}
+.app-container {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px;
+}
