@@ -29,3 +29,22 @@ li {
   border-radius: 5px;
   padding: 20px;
 }
+
+.overview {
+  margin-bottom: 15px;
+}
+
+.weather-temperature img {
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
+}
+.weather-temperature strong {
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.weather-temperature .units {
+  font-size: 16px;
+}
