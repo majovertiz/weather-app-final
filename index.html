@@ -9,6 +9,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
 
     <title>Weather App</title>
@@ -18,9 +19,9 @@
       <div class="main-app-container">
         <div class="app-container">
           <div class="overview">
-            <h1>San Francisco</h1>
+            <h1 id="city"></h1>
             <ul>
-              <li>Sunny</li>
+              <li id="description"></li>
             </ul>
           </div>
           <div class="row">
@@ -30,15 +31,15 @@
                   src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
                   alt="Sunny"
                 />
-                <strong id="temperature"> 15</strong
+                <strong id="temperature"> </strong
                 ><span class="units">°C|<a href="#">°F</a></span>
               </div>
             </div>
             <div class="col-6">
               <ul>
                 <li>Friday 06:00 pm</li>
-                <li>Humidity: 85%</li>
-                <li>Wind: 12 km/h</li>
+                <li>Humidity: <span id="humidity"></span> %</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
           </div>
