@@ -1,10 +1,17 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(239, 246, 249) 0%,
+    rgb(206, 239, 253) 90%
+  );
+
+  color: grey;
 }
 
 h1 {
-  font-size: 24px;
-  font-weight: 100;
+  font-size: 30px;
+  font-weight: 100px;
   line-height: 28px;
   margin-bottom: 0;
 }
@@ -17,8 +24,9 @@ ul {
 li {
   list-style: none;
   font-size: 16px;
-  font-weight: 100;
+  font-weight: 80px;
   line-height: 19px;
+  text-align: right;
 }
 
 li:first-letter {
@@ -27,14 +35,22 @@ li:first-letter {
 a {
   text-decoration: none;
 }
+.day-description {
+  text-align: left;
+}
+.date-info {
+  font-size: 20px;
+}
 .main-app-container {
   max-width: 600px;
   margin: 30px auto;
+  margin-top: 100px;
 }
 .app-container {
-  border: 1px solid black;
-  border-radius: 5px;
+  border: 8px solid #dbd8e3;
+  border-radius: 10px;
   padding: 20px;
+  background-color: white;
 }
 
 .overview {
@@ -72,11 +88,11 @@ a {
 }
 
 .weather-forecast-date {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .weather-forecast-temperature {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .weather-forecast-temperature-min {
