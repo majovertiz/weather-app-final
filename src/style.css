@@ -98,3 +98,7 @@ a {
 .weather-forecast-temperature-min {
   opacity: 0.5;
 }
+
+.hidden {
+  display: none;
+}

@@ -49,10 +49,16 @@ function displayForecast(response) {
         width="45"
         />
         <div class="weather-forecast-temperature">
-          <span class="weather-forecast-temperature-max">${Math.round(
+          <span class="celcius-temp weather-forecast-temperature-max">${Math.round(
             forecastDay.temperature.maximum
           )}º</span>
-          <span class="weather-forecast-temperature-min"> ${Math.round(
+          <span class="celcius-temp weather-forecast-temperature-min"> ${Math.round(
+            forecastDay.temperature.minimum
+          )}º </span>
+          <span class="fahrenheit-temp weather-forecast-temperature-max hidden">${toFahrenheit(
+            forecastDay.temperature.maximum
+          )}º</span>
+          <span class="fahrenheit-temp weather-forecast-temperature-min hidden"> ${toFahrenheit(
             forecastDay.temperature.minimum
           )}º </span>
         </div>
@@ -113,8 +119,14 @@ function displayFahrenheitTemperature(event) {
   let temperatureElement = document.querySelector("#temperature");
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  temperatureElement.innerHTML = toFahrenheit(celsiusTemperature);
+
+  document
+    .querySelectorAll(".celcius-temp")
+    .forEach((element) => element.classList.add("hidden"));
+  document
+    .querySelectorAll(".fahrenheit-temp")
+    .forEach((element) => element.classList.remove("hidden"));
 }
 function displayCelsiusTemperature(event) {
   event.preventDefault();
@@ -122,6 +134,17 @@ function displayCelsiusTemperature(event) {
   fahrenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
+
+  document
+    .querySelectorAll(".celcius-temp")
+    .forEach((element) => element.classList.remove("hidden"));
+  document
+    .querySelectorAll(".fahrenheit-temp")
+    .forEach((element) => element.classList.add("hidden"));
+}
+
+function toFahrenheit(celciusTemperature) {
+  return Math.round((celciusTemperature * 9) / 5 + 32);
 }
 
 let celsiusTemperature = null;
